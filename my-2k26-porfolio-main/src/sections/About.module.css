@@ -1,0 +1,85 @@
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.imageCol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 300px;
+    height: 340px;
+}
+
+.profileImage {
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    z-index: 1;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.imageDecor {
+    position: absolute;
+    inset: 14px -14px -14px 14px;
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--accent);
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.infoBadges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 16px;
+    border-radius: var(--radius-full);
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-card);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.textCol {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.heading {
+    margin-bottom: 20px;
+}
+
+.bio {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+    .layout {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .imageWrapper {
+        width: 240px;
+        height: 280px;
+    }
+}

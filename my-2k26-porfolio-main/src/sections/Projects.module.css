@@ -1,0 +1,153 @@
+.filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+}
+
+.filterBtn {
+    padding: 8px 20px;
+    border-radius: var(--radius-full);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: transparent;
+    border: 1px solid var(--border-card);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.filterBtn:hover {
+    color: var(--text-primary);
+    border-color: var(--accent);
+}
+
+.filterActive {
+    background: var(--accent-gradient);
+    color: #fff !important;
+    border-color: transparent !important;
+    box-shadow: 0 4px 16px var(--accent-glow);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: var(--bg-card);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-card);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    transition: all var(--transition-base);
+    text-decoration: none;
+    display: block;
+}
+
+.card:hover {
+    border-color: var(--accent);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl), var(--shadow-glow);
+}
+
+.cardImage {
+    position: relative;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(135deg,
+            color-mix(in srgb, var(--project-color) 15%, var(--bg-card-solid)),
+            color-mix(in srgb, var(--project-color) 5%, var(--bg-card-solid)));
+}
+
+.placeholder {
+    font-size: 3.5rem;
+    font-weight: 900;
+    opacity: 0.12;
+    color: var(--project-color);
+    letter-spacing: -0.04em;
+}
+
+.category {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: var(--radius-full);
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-card);
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.cardBody {
+    padding: 24px;
+}
+
+.cardTitle {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+.cardProblem {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.techTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    background: var(--accent-glow);
+    color: var(--accent);
+    border: 1px solid rgba(123, 107, 245, 0.1);
+}
+
+.viewLink {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    transition: gap var(--transition-fast);
+}
+
+.card:hover .viewLink {
+    gap: 12px;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,64 @@
+.footer {
+    padding: 48px 0 28px;
+    border-top: 1px solid var(--border);
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand {
+    text-align: center;
+}
+
+.name {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.03em;
+}
+
+.accent {
+    background: var(--accent-gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.tagline {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-card);
+    color: var(--text-muted);
+    transition: all var(--transition-fast);
+}
+
+.socials a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-glow);
+}
+
+.copy {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
